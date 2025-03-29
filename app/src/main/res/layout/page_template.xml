@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/template"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/BGPattern"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:alpha="0.03"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/Empty"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/group_4"
+        app:tint="@color/main_color" />
+
+    <TextView
+        android:id="@+id/placeholder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/oxygen_bold"
+        android:text="@string/Button1"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/Bills_Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TopShadow"
+        app:layout_constraintVertical_bias="0.499" />
+
+    <ImageView
+        android:id="@+id/Home_Button"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="6dp"
+        android:background="@color/main_color"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/Home"
+        app:layout_constraintBottom_toTopOf="@+id/Bottom"
+        app:layout_constraintEnd_toStartOf="@+id/Analytics_Button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@android:drawable/screen_background_light"
+        app:tint="@color/main_color" />
+
+    <ImageView
+        android:id="@+id/Analytics_Button"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="6dp"
+        android:background="@color/main_color"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/Analytics"
+        app:layout_constraintBottom_toTopOf="@+id/Bottom"
+        app:layout_constraintEnd_toStartOf="@+id/Bills_Button"
+        app:layout_constraintStart_toEndOf="@+id/Home_Button"
+        app:srcCompat="@android:drawable/screen_background_light"
+        app:tint="@color/main_color" />
+
+    <ImageView
+        android:id="@+id/Bills_Button"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="6dp"
+        android:background="@color/main_color"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/Bills"
+        app:layout_constraintBottom_toTopOf="@+id/Bottom"
+        app:layout_constraintEnd_toStartOf="@+id/FDs_Button"
+        app:layout_constraintStart_toEndOf="@+id/Analytics_Button"
+        app:srcCompat="@android:drawable/screen_background_light"
+        app:tint="@color/main_color" />
+
+    <ImageView
+        android:id="@+id/FDs_Button"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="12dp"
+        android:background="@color/main_color"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/FDs"
+        app:layout_constraintBottom_toTopOf="@+id/Bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Bills_Button"
+        app:srcCompat="@android:drawable/screen_background_light"
+        app:tint="@color/main_color" />
+
+    <TextView
+        android:id="@+id/Home_Text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:alpha="1"
+        android:background="#00FFFFFF"
+        android:fontFamily="@font/oxygen_bold"
+        android:text="@string/Home"
+        android:textAlignment="center"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@+id/Home_Button"
+        app:layout_constraintEnd_toEndOf="@+id/Home_Button"
+        app:layout_constraintStart_toStartOf="@+id/Home_Button"
+        app:layout_constraintTop_toTopOf="@+id/Home_Button"
+        app:layout_constraintVertical_bias="0.92" />
+
+    <TextView
+        android:id="@+id/Analytics_Text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:alpha="1"
+        android:background="#00FFFFFF"
+        android:fontFamily="@font/oxygen_bold"
+        android:text="@string/Analytics"
+        android:textAlignment="center"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@+id/Analytics_Button"
+        app:layout_constraintEnd_toEndOf="@+id/Analytics_Button"
+        app:layout_constraintStart_toStartOf="@+id/Analytics_Button"
+        app:layout_constraintTop_toTopOf="@+id/Analytics_Button"
+        app:layout_constraintVertical_bias="0.92" />
+
+    <TextView
+        android:id="@+id/Bills_Text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:alpha="1"
+        android:background="#00FFFFFF"
+        android:fontFamily="@font/oxygen_bold"
+        android:text="@string/Bills"
+        android:textAlignment="center"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@+id/Bills_Button"
+        app:layout_constraintEnd_toEndOf="@+id/Bills_Button"
+        app:layout_constraintStart_toStartOf="@+id/Bills_Button"
+        app:layout_constraintTop_toTopOf="@+id/Bills_Button"
+        app:layout_constraintVertical_bias="0.92" />
+
+    <TextView
+        android:id="@+id/FDs_Text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:alpha="1"
+        android:background="#00FFFFFF"
+        android:fontFamily="@font/oxygen_bold"
+        android:text="@string/FDs"
+        android:textAlignment="center"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@+id/FDs_Button"
+        app:layout_constraintEnd_toEndOf="@+id/FDs_Button"
+        app:layout_constraintStart_toStartOf="@+id/FDs_Button"
+        app:layout_constraintTop_toTopOf="@+id/FDs_Button"
+        app:layout_constraintVertical_bias="0.92" />
+
+    <ImageView
+        android:id="@+id/House_Image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="2dp"
+        android:background="#00FFFFFF"
+        android:scaleType="fitCenter"
+        android:contentDescription="@string/Empty"
+        app:tint="@color/background"
+        app:layout_constraintBottom_toTopOf="@+id/Home_Text"
+        app:layout_constraintEnd_toEndOf="@+id/Home_Button"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/Home_Button"
+        app:layout_constraintTop_toTopOf="@+id/Home_Button"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/_home_1" />
+
+    <ImageView
+        android:id="@+id/Analytics_Image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="2dp"
+        android:background="#00FFFFFF"
+        android:scaleType="fitCenter"
+        android:contentDescription="@string/Empty"
+        app:tint="@color/background"
+        app:layout_constraintBottom_toTopOf="@+id/Analytics_Text"
+        app:layout_constraintEnd_toEndOf="@+id/Analytics_Button"
+        app:layout_constraintStart_toStartOf="@+id/Analytics_Button"
+        app:layout_constraintTop_toTopOf="@+id/Analytics_Button"
+        app:srcCompat="@drawable/analysis" />
+
+    <ImageView
+        android:id="@+id/Bills_Image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="2dp"
+        android:background="#00FFFFFF"
+        android:scaleType="fitCenter"
+        android:contentDescription="@string/Empty"
+        app:tint="@color/background"
+        app:layout_constraintBottom_toTopOf="@+id/Bills_Text"
+        app:layout_constraintEnd_toEndOf="@+id/Bills_Button"
+        app:layout_constraintStart_toStartOf="@+id/Bills_Button"
+        app:layout_constraintTop_toTopOf="@+id/Bills_Button"
+        app:srcCompat="@drawable/bills" />
+
+    <ImageView
+        android:id="@+id/FDs_Image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="2dp"
+        android:background="#00FFFFFF"
+        android:scaleType="fitCenter"
+        android:contentDescription="@string/Empty"
+        app:tint="@color/background"
+        app:layout_constraintBottom_toTopOf="@+id/FDs_Text"
+        app:layout_constraintEnd_toEndOf="@+id/FDs_Button"
+        app:layout_constraintStart_toStartOf="@+id/FDs_Button"
+        app:layout_constraintTop_toTopOf="@+id/FDs_Button"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/fds" />
+
+    <ImageView
+        android:id="@+id/TopShadow"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:contentDescription="@string/Empty"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/screen_background_light"
+        app:tint="@color/secondary_color" />
+
+    <ImageView
+        android:id="@+id/Top"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:contentDescription="@string/Empty"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/screen_background_light"
+        app:tint="@color/tertiary_color" />
+
+    <ImageView
+        android:id="@+id/BottomShadow"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:contentDescription="@string/Empty"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@android:drawable/screen_background_light"
+        app:tint="@color/secondary_color" />
+
+    <ImageView
+        android:id="@+id/Bottom"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:contentDescription="@string/Empty"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@android:drawable/screen_background_light"
+        app:tint="@color/tertiary_color" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:alpha="0.75"
+        android:background="#0000"
+        android:text="@string/Application_Dev"
+        android:textColor="@color/background"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="main_color">#FFA60C</color>
+    <color name="secondary_color">#FFC054</color>
+    <color name="tertiary_color">#784C00</color>
+
+    <color name="hover_effect">#B15A00</color>
+
+    <color name="error">#D74400</color>
+    <color name="background">#FFF4E0</color>
+    <color name="text">#4A4A4A</color>
+
+    <color name="Groceries">#94DB4D</color>
+    <color name="Food">#E63F3F</color>
+    <color name="Electronics">#EDD454</color>
+    <color name="Bill">#4785E7</color>
+    <color name="Maintenance">#6B6B6B</color>
+    <color name="Misc">#AF7DE7</color>
+
+    <color name="Profit">#26FF00</color>
+    <color name="Loss">#FF0000</color>
+    <color name="Zero">#757575</color>
+
+
+</resources>

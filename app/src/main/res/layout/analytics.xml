@@ -1,0 +1,1322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/analytics"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/BGPattern"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:alpha="0.03"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/Empty"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/group_4"
+        app:tint="@color/main_color" />
+
+    <ImageView
+        android:id="@+id/UpperArea"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:backgroundTint="?android:attr/background"
+        android:contentDescription="@string/Empty"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/LowerArea"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TopShadow"
+        app:srcCompat="@android:drawable/editbox_background"
+        app:tint="?android:attr/background" />
+
+    <ImageView
+        android:id="@+id/LowerArea"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="90dp"
+        android:backgroundTint="?android:attr/background"
+        android:contentDescription="@string/Empty"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/BottomShadow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/UpperArea"
+        app:srcCompat="@android:drawable/editbox_background"
+        app:tint="?android:attr/background" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="90dp"
+        android:background="#0000"
+        android:fadeScrollbars="false"
+        app:layout_constraintBottom_toBottomOf="@+id/LowerArea"
+        app:layout_constraintEnd_toEndOf="@+id/LowerArea"
+        app:layout_constraintStart_toStartOf="@+id/LowerArea"
+        app:layout_constraintTop_toTopOf="@+id/LowerArea">
+
+        <LinearLayout
+            android:id="@+id/linlay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="2dp"
+        android:background="#0000"
+        android:onClick="Load_MonthlyCells"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/Empty"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="@+id/LowerArea"
+        app:layout_constraintStart_toStartOf="@+id/LowerArea"
+        app:layout_constraintTop_toTopOf="@+id/LowerArea"
+        app:srcCompat="@android:drawable/editbox_background"
+        app:tint="@color/secondary_color" />
+
+    <TextView
+        android:id="@+id/AnalyTxt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:background="#0000"
+        android:fontFamily="@font/oxygen"
+        android:text="@string/Monthsexp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/imageView6"
+        app:layout_constraintTop_toTopOf="@+id/imageView6" />
+
+    <TextView
+        android:id="@+id/CurrentMonthNYear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="2dp"
+        android:background="#0000"
+        android:fontFamily="@font/oxygen_bold"
+        android:text="@string/Date_Placeholder"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/LowerArea"
+        app:layout_constraintTop_toTopOf="@+id/LowerArea" />
+
+    <TextView
+        android:id="@+id/AnalyTxt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:alpha="1"
+        android:background="#0000"
+        android:fontFamily="@font/oxygen"
+        android:text="@string/Dailyavg"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+        app:layout_constraintStart_toStartOf="@+id/imageView6"
+        app:layout_constraintTop_toBottomOf="@+id/AnalyTxt1" />
+
+    <TextView
+        android:id="@+id/AnalyTxt1Amt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:background="#0000"
+        android:fontFamily="@font/oxygen_bold"
+        android:text="@string/PlaceholderMoney"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/AnalyTxt1"
+        app:layout_constraintTop_toTopOf="@+id/imageView6" />
+
+    <TextView
+        android:id="@+id/AnalyTxt2Amt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:alpha="1"
+        android:background="#0000"
+        android:fontFamily="@font/oxygen_bold"
+        android:text="@string/PlaceholderMoney"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+        app:layout_constraintStart_toEndOf="@+id/AnalyTxt2"
+        app:layout_constraintTop_toBottomOf="@+id/AnalyTxt1Amt" />
+
+    <ImageView
+        android:id="@+id/Borders"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="40dp"
+        android:background="#0000"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/Empty"
+        app:tint="?android:attr/textColor"
+        app:layout_constraintBottom_toBottomOf="@+id/UpperArea"
+        app:layout_constraintEnd_toEndOf="@+id/UpperArea"
+        app:layout_constraintStart_toStartOf="@+id/UpperArea"
+        app:layout_constraintTop_toTopOf="@+id/UpperArea"
+        app:srcCompat="@android:drawable/editbox_background" />
+
+    <ImageView
+        android:id="@+id/BordersCover"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="-5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="#0000"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/Empty"
+        app:tint="?android:attr/background"
+        app:layout_constraintBottom_toBottomOf="@+id/Borders"
+        app:layout_constraintEnd_toEndOf="@+id/Borders"
+        app:layout_constraintStart_toStartOf="@+id/Borders"
+        app:layout_constraintTop_toTopOf="@+id/Borders"
+        app:srcCompat="@android:drawable/editbox_background" />
+
+    <TextView
+        android:id="@+id/AnalAmt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#0000"
+        android:fontFamily="@font/oxygen"
+        android:text="@string/Anal_Placeholder"
+        android:textSize="8sp"
+        app:layout_constraintEnd_toStartOf="@+id/BordersCover"
+        app:layout_constraintStart_toStartOf="@+id/UpperArea"
+        app:layout_constraintTop_toTopOf="@+id/GraphLay" />
+
+    <TextView
+        android:id="@+id/AnalAmt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#0000"
+        android:fontFamily="@font/oxygen"
+        android:text="@string/Anal_Placeholder"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toTopOf="@+id/AnalAmt3"
+        app:layout_constraintEnd_toStartOf="@+id/BordersCover"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="@+id/UpperArea"
+        app:layout_constraintTop_toBottomOf="@+id/AnalAmt1" />
+
+    <TextView
+        android:id="@+id/AnalAmt3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#0000"
+        android:fontFamily="@font/oxygen"
+        android:text="@string/Anal_Placeholder"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toTopOf="@+id/AnalAmt4"
+        app:layout_constraintEnd_toStartOf="@+id/BordersCover"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="@+id/UpperArea"
+        app:layout_constraintTop_toBottomOf="@+id/AnalAmt2" />
+
+    <TextView
+        android:id="@+id/AnalAmt4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#0000"
+        android:fontFamily="@font/oxygen"
+        android:text="@string/Anal_Placeholder"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toTopOf="@+id/AnalAmt5"
+        app:layout_constraintEnd_toStartOf="@+id/BordersCover"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="@+id/UpperArea"
+        app:layout_constraintTop_toBottomOf="@+id/AnalAmt3" />
+
+    <TextView
+        android:id="@+id/analAmt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:background="#0000"
+        android:fontFamily="@font/oxygen"
+        android:rotation="-90"
+        android:text="@string/Amount"
+        android:textSize="8sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/Borders"
+        app:layout_constraintEnd_toStartOf="@+id/Borders"
+        app:layout_constraintTop_toTopOf="@+id/Borders" />
+
+    <TextView
+        android:id="@+id/analAmt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#0000"
+        android:fontFamily="@font/oxygen"
+        android:rotation="0"
+        android:text="@string/Categories"
+        android:textSize="8sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/UpperArea"
+        app:layout_constraintEnd_toEndOf="@+id/Borders"
+        app:layout_constraintStart_toStartOf="@+id/Borders"
+        app:layout_constraintTop_toBottomOf="@+id/Borders"
+        app:layout_constraintVertical_bias="0.69" />
+
+    <TextView
+        android:id="@+id/AnalAmt5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#0000"
+        android:fontFamily="@font/oxygen"
+        android:text="@string/Anal_Placeholder"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toTopOf="@+id/AnalAmt6"
+        app:layout_constraintEnd_toStartOf="@+id/BordersCover"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="@+id/UpperArea"
+        app:layout_constraintTop_toBottomOf="@+id/AnalAmt4" />
+
+    <TextView
+        android:id="@+id/AnalAmt6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:background="#0000"
+        android:fontFamily="@font/oxygen"
+        android:text="@string/Anal_Placeholder"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toBottomOf="@+id/Borders"
+        app:layout_constraintEnd_toStartOf="@+id/BordersCover"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="@+id/UpperArea" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/GraphLay"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#0000"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/Borders"
+        app:layout_constraintEnd_toEndOf="@+id/Borders"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/Borders"
+        app:layout_constraintTop_toTopOf="@+id/Borders"
+        app:layout_constraintVertical_bias="1.0">
+
+        <ImageView
+            android:id="@+id/Groceries"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="-4dp"
+            android:background="#0000"
+            android:onClick="Load_CategoryCells"
+            android:scaleType="fitXY"
+            android:contentDescription="@string/Empty"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/Food"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/GroceriesGuideline"
+
+            app:srcCompat="@android:drawable/editbox_background"
+            app:tint="@color/Groceries" />
+
+        <ImageView
+            android:id="@+id/Food"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="-4dp"
+            android:background="#0000"
+            android:onClick="Load_CategoryCells"
+            android:scaleType="fitXY"
+            android:contentDescription="@string/Empty"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/Electronics"
+            app:layout_constraintStart_toEndOf="@+id/Groceries"
+            app:layout_constraintTop_toTopOf="@+id/FoodGuideline"
+            app:srcCompat="@android:drawable/editbox_background"
+            app:tint="@color/Food" />
+
+        <ImageView
+            android:id="@+id/Electronics"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="-4dp"
+            android:background="#0000"
+            android:onClick="Load_CategoryCells"
+            android:scaleType="fitXY"
+            android:contentDescription="@string/Empty"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/Maintenance"
+            app:layout_constraintStart_toEndOf="@+id/Food"
+            app:layout_constraintTop_toTopOf="@+id/ElectronicsGuideline"
+            app:srcCompat="@android:drawable/editbox_background"
+            app:tint="@color/Electronics" />
+
+        <ImageView
+            android:id="@+id/Maintenance"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="-4dp"
+            android:background="#0000"
+            android:onClick="Load_CategoryCells"
+            android:scaleType="fitXY"
+            android:contentDescription="@string/Empty"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/Misc"
+            app:layout_constraintStart_toEndOf="@id/Electronics"
+            app:layout_constraintTop_toTopOf="@+id/MaintenanceGuideline"
+            app:srcCompat="@android:drawable/editbox_background"
+            app:tint="@color/Maintenance" />
+
+        <ImageView
+            android:id="@+id/Misc"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="-4dp"
+            android:layout_marginEnd="4dp"
+            android:background="#0000"
+            android:onClick="Load_CategoryCells"
+            android:scaleType="fitXY"
+            android:contentDescription="@string/Empty"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/Maintenance"
+            app:layout_constraintTop_toTopOf="@+id/MiscGuideline"
+            app:srcCompat="@android:drawable/editbox_background"
+            app:tint="@color/Misc" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/GroceriesGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#0000"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.96" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/FoodGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.6" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/ElectronicsGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/MaintenanceGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.14" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/MiscGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.78" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:background="#0000"
+        android:fontFamily="@font/oxygen"
+        android:text="@string/Groceries"
+        android:textAlignment="center"
+        android:textSize="8sp"
+        app:layout_constraintEnd_toStartOf="@+id/textView10"
+        app:layout_constraintStart_toStartOf="@+id/Borders"
+        app:layout_constraintTop_toBottomOf="@+id/Borders" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#0000"
+        android:fontFamily="@font/oxygen"
+        android:text="@string/Food"
+        android:textAlignment="center"
+        android:textSize="8sp"
+        app:layout_constraintEnd_toStartOf="@+id/textView11"
+        app:layout_constraintStart_toEndOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/Borders" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#0000"
+        android:fontFamily="@font/oxygen"
+        android:text="@string/Electronics"
+        android:textAlignment="center"
+        android:textSize="8sp"
+        app:layout_constraintEnd_toStartOf="@+id/textView13"
+        app:layout_constraintStart_toEndOf="@+id/textView10"
+        app:layout_constraintTop_toBottomOf="@+id/Borders" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#0000"
+        android:fontFamily="@font/oxygen"
+        android:text="@string/Maintenance"
+        android:textAlignment="center"
+        android:textSize="8sp"
+        app:layout_constraintEnd_toStartOf="@+id/textView12"
+        app:layout_constraintStart_toEndOf="@+id/textView11"
+        app:layout_constraintTop_toBottomOf="@+id/Borders" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:background="#0000"
+        android:fontFamily="@font/oxygen"
+        android:text="@string/Misc"
+        android:textAlignment="center"
+        android:textSize="8sp"
+        app:layout_constraintEnd_toEndOf="@+id/Borders"
+        app:layout_constraintStart_toEndOf="@+id/textView13"
+        app:layout_constraintTop_toBottomOf="@+id/Borders" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="65dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="#0000"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/Empty"
+        app:tint="@color/main_color"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+        app:layout_constraintEnd_toEndOf="@+id/imageView6"
+        app:layout_constraintTop_toTopOf="@+id/imageView6"
+        app:srcCompat="@android:drawable/editbox_background_normal" />
+
+    <ImageView
+        android:id="@+id/MenuOpenBut"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="2dp"
+        android:background="#0000"
+        android:onClick="AnalMenuEnable"
+        android:contentDescription="@string/Empty"
+        app:tint="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:srcCompat="?android:attr/actionModeFindDrawable" />
+
+    <ImageView
+        android:id="@+id/Home_Button"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="6dp"
+        android:background="@color/main_color"
+        android:contentDescription="@string/Home"
+        android:onClick="ToHome"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/Bottom"
+        app:layout_constraintEnd_toStartOf="@+id/Analytics_Button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@android:drawable/screen_background_light"
+        app:tint="@color/main_color" />
+
+    <ImageView
+        android:id="@+id/Analytics_Button"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="6dp"
+        android:background="@color/main_color"
+        android:contentDescription="@string/Analytics"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/Bottom"
+        app:layout_constraintEnd_toStartOf="@+id/Bills_Button"
+        app:layout_constraintStart_toEndOf="@+id/Home_Button"
+        app:srcCompat="@android:drawable/screen_background_light"
+        app:tint="@color/hover_effect" />
+
+    <ImageView
+        android:id="@+id/Bills_Button"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="6dp"
+        android:background="@color/main_color"
+        android:contentDescription="@string/Bills"
+        android:onClick="ToBills"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/Bottom"
+        app:layout_constraintEnd_toStartOf="@+id/FDs_Button"
+        app:layout_constraintStart_toEndOf="@+id/Analytics_Button"
+        app:srcCompat="@android:drawable/screen_background_light"
+        app:tint="@color/main_color" />
+
+    <ImageView
+        android:id="@+id/FDs_Button"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="12dp"
+        android:background="@color/main_color"
+        android:contentDescription="@string/FDs"
+        android:onClick="ToFDs"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/Bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Bills_Button"
+        app:srcCompat="@android:drawable/screen_background_light"
+        app:tint="@color/main_color" />
+
+    <TextView
+        android:id="@+id/Home_Text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:alpha="1"
+        android:background="#00FFFFFF"
+        android:fontFamily="@font/oxygen_bold"
+        android:text="@string/Home"
+        android:textAlignment="center"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@+id/Home_Button"
+        app:layout_constraintEnd_toEndOf="@+id/Home_Button"
+        app:layout_constraintStart_toStartOf="@+id/Home_Button"
+        app:layout_constraintTop_toTopOf="@+id/Home_Button"
+        app:layout_constraintVertical_bias="0.92" />
+
+    <TextView
+        android:id="@+id/Analytics_Text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:alpha="1"
+        android:background="#00FFFFFF"
+        android:fontFamily="@font/oxygen_bold"
+        android:text="@string/Analytics"
+        android:textAlignment="center"
+        android:textColor="@color/background"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@+id/Analytics_Button"
+        app:layout_constraintEnd_toEndOf="@+id/Analytics_Button"
+        app:layout_constraintStart_toStartOf="@+id/Analytics_Button"
+        app:layout_constraintTop_toTopOf="@+id/Analytics_Button"
+        app:layout_constraintVertical_bias="0.92" />
+
+    <TextView
+        android:id="@+id/Bills_Text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:alpha="1"
+        android:background="#00FFFFFF"
+        android:fontFamily="@font/oxygen_bold"
+        android:text="@string/Bills"
+        android:textAlignment="center"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@+id/Bills_Button"
+        app:layout_constraintEnd_toEndOf="@+id/Bills_Button"
+        app:layout_constraintStart_toStartOf="@+id/Bills_Button"
+        app:layout_constraintTop_toTopOf="@+id/Bills_Button"
+        app:layout_constraintVertical_bias="0.92" />
+
+    <TextView
+        android:id="@+id/FDs_Text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:alpha="1"
+        android:background="#00FFFFFF"
+        android:fontFamily="@font/oxygen_bold"
+        android:text="@string/FDs"
+        android:textAlignment="center"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@+id/FDs_Button"
+        app:layout_constraintEnd_toEndOf="@+id/FDs_Button"
+        app:layout_constraintStart_toStartOf="@+id/FDs_Button"
+        app:layout_constraintTop_toTopOf="@+id/FDs_Button"
+        app:layout_constraintVertical_bias="0.92" />
+
+    <ImageView
+        android:id="@+id/House_Image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="2dp"
+        android:background="#00FFFFFF"
+        android:scaleType="fitCenter"
+        android:contentDescription="@string/Empty"
+        app:tint="@color/background"
+        app:layout_constraintBottom_toTopOf="@+id/Home_Text"
+        app:layout_constraintEnd_toEndOf="@+id/Home_Button"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/Home_Button"
+        app:layout_constraintTop_toTopOf="@+id/Home_Button"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/_home_1" />
+
+    <ImageView
+        android:id="@+id/Analytics_Image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="2dp"
+        android:background="#00FFFFFF"
+        android:scaleType="fitCenter"
+        android:contentDescription="@string/Empty"
+        app:tint="@color/background"
+        app:layout_constraintBottom_toTopOf="@+id/Analytics_Text"
+        app:layout_constraintEnd_toEndOf="@+id/Analytics_Button"
+        app:layout_constraintStart_toStartOf="@+id/Analytics_Button"
+        app:layout_constraintTop_toTopOf="@+id/Analytics_Button"
+        app:srcCompat="@drawable/analysis" />
+
+    <ImageView
+        android:id="@+id/Bills_Image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="2dp"
+        android:background="#00FFFFFF"
+        android:scaleType="fitCenter"
+        android:contentDescription="@string/Empty"
+        app:tint="@color/background"
+        app:layout_constraintBottom_toTopOf="@+id/Bills_Text"
+        app:layout_constraintEnd_toEndOf="@+id/Bills_Button"
+        app:layout_constraintStart_toStartOf="@+id/Bills_Button"
+        app:layout_constraintTop_toTopOf="@+id/Bills_Button"
+        app:srcCompat="@drawable/bills" />
+
+    <ImageView
+        android:id="@+id/FDs_Image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="2dp"
+        android:background="#00FFFFFF"
+        android:scaleType="fitCenter"
+        android:contentDescription="@string/Empty"
+        app:tint="@color/background"
+        app:layout_constraintBottom_toTopOf="@+id/FDs_Text"
+        app:layout_constraintEnd_toEndOf="@+id/FDs_Button"
+        app:layout_constraintStart_toStartOf="@+id/FDs_Button"
+        app:layout_constraintTop_toTopOf="@+id/FDs_Button"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/fds" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/AnalyticsMenu"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:alpha="1"
+        android:background="#0000"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <ImageView
+            android:id="@+id/SecondaryMenuLayer"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:alpha="0.8"
+            android:clickable="true"
+            android:contentDescription="@string/Empty"
+            android:focusable="true"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="?android:attr/background"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <ImageView
+            android:id="@+id/SecondaryMenuBox"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="95dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="95dp"
+            android:background="#0000"
+            android:contentDescription="@string/Empty"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/SecondaryMenuTitle"
+            app:srcCompat="@android:drawable/editbox_background_normal"
+            app:tint="@color/main_color" />
+
+        <ImageView
+            android:id="@+id/SecondaryMenuTitle"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="90dp"
+            android:layout_marginEnd="90dp"
+            android:background="#0000"
+            android:contentDescription="@string/Empty"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.39"
+            app:srcCompat="@android:drawable/editbox_background_normal"
+            app:tint="@color/tertiary_color" />
+
+        <TextView
+            android:id="@+id/SecondaryMenuTitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:background="#0000"
+            android:fontFamily="@font/oxygen_bold"
+            android:text="@string/AnalMenu"
+            android:textColor="@color/background"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/SecondaryMenuTitle"
+            app:layout_constraintStart_toStartOf="@+id/SecondaryMenuTitle"
+            app:layout_constraintTop_toTopOf="@+id/SecondaryMenuTitle" />
+
+        <Button
+            android:id="@+id/SelectMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/secondary_color"
+            android:fontFamily="@font/oxygen_bold"
+            android:onClick="GoToMonthM"
+            android:text="@string/SlctMonth"
+            android:textAlignment="center"
+            android:textColor="?android:attr/textColor"
+            app:cornerRadius="5dp"
+            app:layout_constraintEnd_toEndOf="@+id/SecondaryMenuBox"
+            app:layout_constraintStart_toStartOf="@+id/SecondaryMenuBox"
+            app:layout_constraintTop_toBottomOf="@+id/SecondaryMenuTitle"
+            app:rippleColor="@color/hover_effect"
+            app:strokeColor="@color/background"
+            app:strokeWidth="1dp" />
+
+        <Button
+            android:id="@+id/CompareMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/secondary_color"
+            android:fontFamily="@font/oxygen_bold"
+            android:onClick="GoToCompareM"
+            android:text="@string/CompareMonth"
+            android:textAlignment="center"
+            android:textColor="?android:attr/textColor"
+            app:cornerRadius="5dp"
+            app:layout_constraintBottom_toTopOf="@+id/ReturnAnal"
+            app:layout_constraintEnd_toEndOf="@+id/SecondaryMenuBox"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="@+id/SecondaryMenuBox"
+            app:layout_constraintTop_toBottomOf="@+id/SelectMonth"
+            app:rippleColor="@color/hover_effect"
+            app:strokeColor="@color/background"
+            app:strokeWidth="1dp" />
+
+        <Button
+            android:id="@+id/ReturnAnal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
+            android:backgroundTint="@color/secondary_color"
+            android:fontFamily="@font/oxygen_bold"
+            android:onClick="AnalMenuDisable"
+            android:text="@string/Return"
+            android:textAlignment="center"
+            android:textColor="?android:attr/textColor"
+            app:cornerRadius="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/SecondaryMenuBox"
+            app:layout_constraintEnd_toEndOf="@+id/SecondaryMenuBox"
+            app:layout_constraintHorizontal_bias="0.493"
+            app:layout_constraintStart_toStartOf="@+id/SecondaryMenuBox"
+            app:rippleColor="@color/hover_effect"
+            app:strokeColor="@color/background"
+            app:strokeWidth="1dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ChooseMonthMenu"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:alpha="1"
+        android:background="#0000"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <ImageView
+            android:id="@+id/SecondaryMenuLayerMonth"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:alpha="0.8"
+            android:clickable="true"
+            android:contentDescription="@string/Empty"
+            android:focusable="true"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="?android:attr/background"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <ImageView
+            android:id="@+id/SecondaryMenuBoxMonth"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="75dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="75dp"
+            android:background="#0000"
+            android:contentDescription="@string/Empty"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/SecondaryMenuTitleMonth"
+            app:srcCompat="@android:drawable/editbox_background_normal"
+            app:tint="@color/main_color" />
+
+        <ImageView
+            android:id="@+id/secondaryMenuLightBoxMonth"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="55dp"
+            android:background="#0000"
+            android:contentDescription="@string/Empty"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="@+id/SecondaryMenuBoxMonth"
+            app:layout_constraintEnd_toEndOf="@+id/SecondaryMenuBoxMonth"
+            app:layout_constraintStart_toStartOf="@+id/SecondaryMenuBoxMonth"
+            app:layout_constraintTop_toBottomOf="@+id/SecondaryMenuTitleMonth"
+            app:srcCompat="@android:drawable/editbox_background_normal"
+            app:tint="@color/secondary_color" />
+
+        <ImageView
+            android:id="@+id/SecondaryMenuTitleMonth"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="70dp"
+            android:layout_marginEnd="70dp"
+            android:background="#0000"
+            android:contentDescription="@string/Empty"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.39"
+            app:srcCompat="@android:drawable/editbox_background_normal"
+            app:tint="@color/tertiary_color" />
+
+        <TextView
+            android:id="@+id/SecondaryMenuTitleTextMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:background="#0000"
+            android:fontFamily="@font/oxygen_bold"
+            android:text="@string/SlctMonth"
+            android:textColor="@color/background"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/SecondaryMenuTitleMonth"
+            app:layout_constraintStart_toStartOf="@+id/SecondaryMenuTitleMonth"
+            app:layout_constraintTop_toTopOf="@+id/SecondaryMenuTitleMonth" />
+
+        <TextView
+            android:id="@+id/secondaryMenuDeclareTextMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="10dp"
+            android:background="#0000"
+            android:fontFamily="@font/oxygen_bold"
+            android:text="@string/SlctMonthColon"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/secondaryMenuLightBoxMonth"
+            app:layout_constraintTop_toTopOf="@+id/secondaryMenuLightBoxMonth" />
+
+        <Button
+            android:id="@+id/SelectMonthMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
+            android:backgroundTint="@color/secondary_color"
+            android:fontFamily="@font/oxygen_bold"
+            android:onClick="MonthSelected"
+            android:text="@string/Select"
+            android:textAlignment="center"
+            android:textColor="?android:attr/textColor"
+            android:textSize="12sp"
+            app:cornerRadius="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/SecondaryMenuBoxMonth"
+            app:layout_constraintEnd_toStartOf="@+id/ReturnAnalMonth"
+            app:layout_constraintStart_toStartOf="@+id/SecondaryMenuBoxMonth"
+            app:rippleColor="@color/hover_effect"
+            app:strokeColor="@color/background"
+            app:strokeWidth="1dp" />
+
+        <Button
+            android:id="@+id/ReturnAnalMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
+            android:backgroundTint="@color/secondary_color"
+            android:fontFamily="@font/oxygen_bold"
+            android:onClick="MenuAnalDisable"
+            android:text="@string/Return"
+            android:textAlignment="center"
+            android:textColor="?android:attr/textColor"
+            android:textSize="12sp"
+            app:cornerRadius="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/SecondaryMenuBoxMonth"
+            app:layout_constraintEnd_toEndOf="@+id/SecondaryMenuBoxMonth"
+            app:layout_constraintHorizontal_bias="0.91"
+            app:layout_constraintStart_toEndOf="@+id/SelectMonthMonth"
+            app:rippleColor="@color/hover_effect"
+            app:strokeColor="@color/background"
+            app:strokeWidth="1dp" />
+
+        <EditText
+            android:id="@+id/YearSelectNumber"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="7dp"
+            android:background="?android:attr/background"
+            android:ems="10"
+            android:inputType="number"
+            app:layout_constraintBottom_toBottomOf="@+id/secondaryMenuLightBoxMonth"
+            app:layout_constraintEnd_toEndOf="@+id/secondaryMenuLightBoxMonth"
+            app:layout_constraintStart_toEndOf="@+id/MonthSelectSpinner"
+            app:layout_constraintTop_toBottomOf="@+id/secondaryMenuDeclareTextMonth" />
+
+        <Spinner
+            android:id="@+id/MonthSelectSpinner"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:background="#0000"
+            android:entries="@array/Month"
+            android:spinnerMode="dialog"
+            app:layout_constraintBottom_toBottomOf="@+id/secondaryMenuLightBoxMonth"
+            app:layout_constraintStart_toStartOf="@+id/secondaryMenuLightBoxMonth"
+            app:layout_constraintTop_toBottomOf="@+id/secondaryMenuDeclareTextMonth" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/CompareMonthMenu"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:alpha="1"
+        android:background="#0000"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <ImageView
+            android:id="@+id/SecondaryMenuLayerCompare"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:alpha="0.8"
+            android:clickable="true"
+            android:contentDescription="@string/Empty"
+            android:focusable="true"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="?android:attr/background"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <ImageView
+            android:id="@+id/SecondaryMenuBoxCompare"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="75dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="75dp"
+            android:background="#0000"
+            android:contentDescription="@string/Empty"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/SecondaryMenuTitleCompare"
+            app:srcCompat="@android:drawable/editbox_background_normal"
+            app:tint="@color/main_color" />
+
+        <ImageView
+            android:id="@+id/secondaryMenuLightBoxCompare"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="55dp"
+            android:background="#0000"
+            android:contentDescription="@string/Empty"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="@+id/SecondaryMenuBoxCompare"
+            app:layout_constraintEnd_toEndOf="@+id/SecondaryMenuBoxCompare"
+            app:layout_constraintStart_toStartOf="@+id/SecondaryMenuBoxCompare"
+            app:layout_constraintTop_toBottomOf="@+id/SecondaryMenuTitleCompare"
+            app:srcCompat="@android:drawable/editbox_background_normal"
+            app:tint="@color/secondary_color" />
+
+        <ImageView
+            android:id="@+id/SecondaryMenuTitleCompare"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="70dp"
+            android:layout_marginEnd="70dp"
+            android:background="#0000"
+            android:contentDescription="@string/Empty"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.39"
+            app:srcCompat="@android:drawable/editbox_background_normal"
+            app:tint="@color/tertiary_color" />
+
+        <TextView
+            android:id="@+id/SecondaryMenuTitleTextCompare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:background="#0000"
+            android:fontFamily="@font/oxygen_bold"
+            android:text="@string/CompareMonth"
+            android:textColor="@color/background"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/SecondaryMenuTitleCompare"
+            app:layout_constraintStart_toStartOf="@+id/SecondaryMenuTitleCompare"
+            app:layout_constraintTop_toTopOf="@+id/SecondaryMenuTitleCompare" />
+
+        <TextView
+            android:id="@+id/secondaryMenuDeclareTextCompare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="10dp"
+            android:background="#0000"
+            android:fontFamily="@font/oxygen_bold"
+            android:text="@string/SlctMonthColon"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/secondaryMenuLightBoxCompare"
+            app:layout_constraintTop_toTopOf="@+id/secondaryMenuLightBoxCompare" />
+
+        <Button
+            android:id="@+id/SelectMonthCompare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
+            android:backgroundTint="@color/secondary_color"
+            android:fontFamily="@font/oxygen_bold"
+            android:onClick="CompareMonthSelected"
+            android:text="@string/Compare"
+            android:textAlignment="center"
+            android:textColor="?android:attr/textColor"
+            android:textSize="12sp"
+            app:cornerRadius="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/SecondaryMenuBoxCompare"
+            app:layout_constraintEnd_toStartOf="@+id/ReturnAnalCompare"
+            app:layout_constraintStart_toStartOf="@+id/SecondaryMenuBoxCompare"
+            app:rippleColor="@color/hover_effect"
+            app:strokeColor="@color/background"
+            app:strokeWidth="1dp" />
+
+        <Button
+            android:id="@+id/ReturnAnalCompare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
+            android:backgroundTint="@color/secondary_color"
+            android:fontFamily="@font/oxygen_bold"
+            android:onClick="MenuAnalDisable"
+            android:text="@string/Return"
+            android:textAlignment="center"
+            android:textColor="?android:attr/textColor"
+            android:textSize="12sp"
+            app:cornerRadius="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/SecondaryMenuBoxCompare"
+            app:layout_constraintEnd_toEndOf="@+id/SecondaryMenuBoxCompare"
+            app:layout_constraintHorizontal_bias="0.91"
+            app:layout_constraintStart_toEndOf="@+id/SelectMonthCompare"
+            app:rippleColor="@color/hover_effect"
+            app:strokeColor="@color/background"
+            app:strokeWidth="1dp" />
+
+        <EditText
+            android:id="@+id/YearSelectNumberCompare"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="7dp"
+            android:background="?android:attr/background"
+            android:ems="10"
+            android:inputType="number"
+            app:layout_constraintBottom_toBottomOf="@+id/secondaryMenuLightBoxCompare"
+            app:layout_constraintEnd_toEndOf="@+id/secondaryMenuLightBoxCompare"
+            app:layout_constraintStart_toEndOf="@+id/MonthSelectSpinnerCompare"
+            app:layout_constraintTop_toBottomOf="@+id/secondaryMenuDeclareTextCompare" />
+
+        <Spinner
+            android:id="@+id/MonthSelectSpinnerCompare"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:background="#0000"
+            android:entries="@array/Month"
+            android:spinnerMode="dialog"
+            app:layout_constraintBottom_toBottomOf="@+id/secondaryMenuLightBoxCompare"
+            app:layout_constraintStart_toStartOf="@+id/secondaryMenuLightBoxCompare"
+            app:layout_constraintTop_toBottomOf="@+id/secondaryMenuDeclareTextCompare" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/TopShadow"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:contentDescription="@string/Empty"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/screen_background_light"
+        app:tint="@color/secondary_color" />
+
+    <ImageView
+        android:id="@+id/Top"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:contentDescription="@string/Empty"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/screen_background_light"
+        app:tint="@color/tertiary_color" />
+
+    <ImageView
+        android:id="@+id/BottomShadow"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:contentDescription="@string/Empty"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@android:drawable/screen_background_light"
+        app:tint="@color/secondary_color" />
+
+    <ImageView
+        android:id="@+id/Bottom"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:contentDescription="@string/Empty"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@android:drawable/screen_background_light"
+        app:tint="@color/tertiary_color" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:alpha="0.75"
+        android:background="#0000"
+        android:text="@string/Application_Dev"
+        android:textColor="@color/background"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Application Developed by Harsh Talekar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

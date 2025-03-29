@@ -1,0 +1,104 @@
+<resources>
+    <string name="app_name">Expense Tracking Application</string>
+    <string name="Button1">Hello! !</string>
+    <string name="Empty"> </string>
+    <string name="ClickAny">Click anywhere to Start</string>
+    <string name="Goto">Go to:</string>
+
+    <string name="PlaceholderMoney">₹ 1,000</string>
+    <string name="Application_Dev">Application Developed by Harsh Talekar</string>
+    <string name="Anal_Placeholder">0 -</string>
+    <string name="Date_Placeholder">January 1970</string>
+    <string name="Time_Placeholder">12:00 am</string>
+    <string name="Day_Placeholder">1</string>
+    <string name="Placeholder_BillName">Bill_Name</string>
+    <string name="DateNDay_Placeholder">1st January 1970</string>
+
+    <string name="Home">Home</string>
+    <string name="Analytics">Analytics</string>
+    <string name="Bills">Bills</string>
+    <string name="FDs">Fixed Deposits</string>
+
+    <string name="FD">Fixed Deposit</string>
+
+    <string name="MonthlyAnnounce">Current Month\'s Expense:</string>
+    <string name="DailyAnnounce">Today\'s Expense:</string>
+
+    <string name="Add">Add</string>
+    <string name="Return">Return</string>
+    <string name="Amount">Amount(₹)</string>
+    <string name="AddFD">Add FD?</string>
+    <string name="AddExpense">Add Expense</string>
+    <string name="AddBill">Add Bill</string>
+    <string name="BillName">Name of the Bill</string>
+    <string name="BillNameColon">Name of the Bill:</string>
+    <string name="Frequency">Frequency:</string>
+    <string name="AmountColon">Amount:</string>
+    <string name="Time">Time:</string>
+    <string name="Date">Date:</string>
+    <string name="CnfrmDlt">Confirm Delete?</string>
+    <string name="AnalMenu">Analytics Menu</string>
+    <string name="SlctMonth">Select Month</string>
+    <string name="SlctMonthColon">Select Month and Year:</string>
+    <string name="CompareMonth">Compare Month</string>
+    <string name="Compare">Compare</string>
+    <string name="Select">Select</string>
+    <string name="Categories">Categories</string>
+    <string name="Day">Day</string>
+
+    <string name="Yes">Yes</string>
+    <string name="No">No</string>
+
+    <string name="ConfirmBillDelText">Confirm Deleting the following bill?</string>
+    <string name="ConfirmFDDelText">Confirm Deleting the Fixed Deposit?</string>
+
+    <string name="Monthsexp">Month\'s Expense:</string>
+    <string name="Daysexp">Day\'s Expense:</string>
+    <string name="Cateexp">Category\'s Expense:</string>
+    <string name="Dailyavg">Daily Average:</string>
+
+
+    <string name="Groceries">Groceries</string>
+    <string name="Food">Food</string>
+    <string name="Electronics">Electronics</string>
+    <string name="Maintenance">Maintenance</string>
+    <string name="Bill">Bill</string>
+    <string name="Misc">Misc</string>
+
+    <string name="Monthly">Monthly</string>
+    <string name="Quarterly">Quarterly</string>
+    <string name="Yearly">Yearly</string>
+
+    <string name="Rupees">₹ </string>
+
+    <string-array name="Categorys">
+        <item>Category</item>
+        <item>Groceries</item>
+        <item>Food</item>
+        <item>Electronics</item>
+        <item>Maintenance</item>
+        <item>Bill</item>
+        <item>Misc</item>
+    </string-array>
+
+    <string-array name="Frequency">
+        <item>Monthly</item>
+        <item>Quarterly</item>
+        <item>Yearly</item>
+    </string-array>
+
+    <string-array name="Month">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+</resources>

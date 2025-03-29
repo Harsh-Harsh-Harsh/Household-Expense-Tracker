@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/CellBill"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alpha="1">
+
+    <ImageView
+        android:id="@+id/CellBGBill"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="5dp"
+        android:background="#0000"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/Empty"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@android:drawable/editbox_background"
+        app:tint="@color/main_color" />
+
+    <ImageView
+        android:id="@+id/CellLightBGBill"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="5dp"
+        android:background="#0000"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/Empty"
+        app:layout_constraintBottom_toBottomOf="@+id/CellBGBill"
+        app:layout_constraintEnd_toEndOf="@+id/CellBGBill"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/CellBGBill"
+        app:srcCompat="@android:drawable/editbox_background"
+        app:tint="@color/secondary_color" />
+
+    <ImageView
+        android:id="@+id/cellLightBGDeleteBill"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="#0000"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/Empty"
+        app:layout_constraintBottom_toBottomOf="@+id/CellBGBill"
+        app:layout_constraintEnd_toEndOf="@+id/CellBGBill"
+        app:layout_constraintStart_toEndOf="@+id/CellLightBGBill"
+        app:layout_constraintTop_toTopOf="@+id/CellBGBill"
+        app:srcCompat="@android:drawable/editbox_background"
+        app:tint="@color/secondary_color" />
+
+    <TextView
+        android:id="@+id/BillText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
+        android:background="#0000"
+        android:fontFamily="@font/oxygen_bold"
+        android:text="@string/Placeholder_BillName"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/CellLightBGBill"
+        app:layout_constraintTop_toTopOf="@+id/CellLightBGBill" />
+
+    <TextView
+        android:id="@+id/BillAmountText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:background="#0000"
+        android:fontFamily="@font/oxygen_bold"
+        android:text="@string/AmountColon"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/CellLightBGBill"
+        app:layout_constraintTop_toBottomOf="@+id/BillText" />
+
+    <TextView
+        android:id="@+id/EntryDateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:background="#0000"
+        android:fontFamily="@font/oxygen"
+        android:text="@string/Date"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/CellLightBGBill"
+        app:layout_constraintTop_toBottomOf="@+id/BillAmountText" />
+
+    <TextView
+        android:id="@+id/FrequencyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="5dp"
+        android:background="#0000"
+        android:fontFamily="@font/oxygen"
+        android:text="@string/Frequency"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/CellLightBGBill"
+        app:layout_constraintStart_toStartOf="@+id/CellLightBGBill"
+        app:layout_constraintTop_toBottomOf="@+id/EntryDateText"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/Frequency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginBottom="5dp"
+        android:background="#0000"
+        android:fontFamily="@font/oxygen"
+        android:text="@string/Monthly"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/CellLightBGBill"
+        app:layout_constraintStart_toEndOf="@+id/FrequencyText"
+        app:layout_constraintTop_toBottomOf="@+id/EntryDate"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/EntryDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:background="#0000"
+        android:fontFamily="@font/oxygen"
+        android:text="@string/DateNDay_Placeholder"
+        android:textAllCaps="false"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/EntryDateText"
+        app:layout_constraintTop_toBottomOf="@+id/BillAmount" />
+
+    <TextView
+        android:id="@+id/BillAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:background="#0000"
+        android:fontFamily="@font/oxygen_bold"
+        android:text="@string/PlaceholderMoney"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/BillAmountText"
+        app:layout_constraintTop_toBottomOf="@+id/BillText" />
+
+    <ImageButton
+        android:id="@+id/DeleteCellButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@color/error"
+        android:onClick="ActivateDeletionBill"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/Empty"
+        app:layout_constraintBottom_toBottomOf="@+id/cellLightBGDeleteBill"
+        app:layout_constraintEnd_toEndOf="@+id/cellLightBGDeleteBill"
+        app:layout_constraintStart_toEndOf="@+id/CellLightBGBill"
+        app:layout_constraintTop_toTopOf="@+id/cellLightBGDeleteBill"
+        app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />
+</androidx.constraintlayout.widget.ConstraintLayout>

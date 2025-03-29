@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/CellFD"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/CellBGFD"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="5dp"
+        android:background="#0000"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/Empty"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@android:drawable/editbox_background"
+        app:tint="@color/main_color" />
+
+    <ImageView
+        android:id="@+id/CellLightBGFD"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="85dp"
+        android:layout_marginBottom="5dp"
+        android:background="#0000"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/Empty"
+        app:layout_constraintBottom_toBottomOf="@+id/CellBGFD"
+        app:layout_constraintEnd_toEndOf="@+id/CellBGFD"
+        app:layout_constraintStart_toEndOf="@+id/FDCategoryColor"
+        app:layout_constraintTop_toTopOf="@+id/CellBGFD"
+        app:srcCompat="@android:drawable/editbox_background"
+        app:tint="@color/secondary_color" />
+
+    <ImageView
+        android:id="@+id/cellLightBGFD2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="#0000"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/Empty"
+        app:layout_constraintBottom_toBottomOf="@+id/CellBGFD"
+        app:layout_constraintEnd_toEndOf="@+id/CellBGFD"
+        app:layout_constraintStart_toEndOf="@+id/CellLightBGFD"
+        app:layout_constraintTop_toTopOf="@+id/CellBGFD"
+        app:srcCompat="@android:drawable/editbox_background"
+        app:tint="@color/secondary_color" />
+
+    <Button
+        android:id="@+id/FDCategoryColor"
+        android:layout_width="18dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="6dp"
+        android:backgroundTint="@color/Maintenance"
+        android:clickable="false"
+        app:cornerRadius="5dp"
+        app:layout_constraintStart_toStartOf="@+id/CellBGFD"
+        app:layout_constraintTop_toTopOf="@+id/CellBGFD"
+        app:strokeColor="@color/text"
+        app:strokeWidth="2dp" />
+
+    <TextView
+        android:id="@+id/FDCategoryText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
+        android:background="#0000"
+        android:fontFamily="@font/oxygen_bold"
+        android:text="@string/Maintenance"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/CellLightBGFD"
+        app:layout_constraintTop_toTopOf="@+id/CellLightBGFD" />
+
+    <TextView
+        android:id="@+id/FDAmountText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:background="#0000"
+        android:fontFamily="@font/oxygen_bold"
+        android:text="@string/AmountColon"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/CellLightBGFD"
+        app:layout_constraintTop_toBottomOf="@+id/FDCategoryText" />
+
+    <TextView
+        android:id="@+id/FDDateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="3dp"
+        android:background="#0000"
+        android:fontFamily="@font/oxygen"
+        android:text="@string/Date"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/CellLightBGFD"
+        app:layout_constraintStart_toStartOf="@+id/CellLightBGFD"
+        app:layout_constraintTop_toBottomOf="@+id/FDAmountText" />
+
+    <TextView
+        android:id="@+id/FDDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginBottom="3dp"
+        android:background="#0000"
+        android:fontFamily="@font/oxygen"
+        android:text="@string/DateNDay_Placeholder"
+        android:textAllCaps="false"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/CellLightBGFD"
+        app:layout_constraintStart_toEndOf="@+id/FDDateText"
+        app:layout_constraintTop_toBottomOf="@+id/FDAmount" />
+
+    <TextView
+        android:id="@+id/FDAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:background="#0000"
+        android:fontFamily="@font/oxygen_bold"
+        android:text="@string/PlaceholderMoney"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/FDAmountText"
+        app:layout_constraintTop_toBottomOf="@+id/FDCategoryText" />
+
+    <ImageButton
+        android:id="@+id/DeleteCellButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@color/error"
+        android:onClick="ActivateDeletionFD"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/Empty"
+        app:layout_constraintBottom_toBottomOf="@+id/cellLightBGFD2"
+        app:layout_constraintEnd_toEndOf="@+id/cellLightBGFD2"
+        app:layout_constraintStart_toEndOf="@+id/CellLightBGFD"
+        app:layout_constraintTop_toTopOf="@+id/cellLightBGFD2"
+        app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />
+</androidx.constraintlayout.widget.ConstraintLayout>

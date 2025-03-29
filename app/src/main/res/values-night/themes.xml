@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.ExpenseTracking" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your dark theme here. -->
+        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="android:colorPrimary">@color/main_color</item>
+        <item name="colorSecondary">@color/secondary_color</item>
+        <item name="colorAccent">@color/hover_effect</item>
+        <item name="colorError">@color/error</item>
+        <item name="colorTertiary">@color/tertiary_color</item>
+        <item name="android:textColor">@color/background</item>
+        <item name="android:background">@color/text</item>
+
+        <item name="android:statusBarColor">@color/tertiary_color</item>
+        <item name="android:navigationBarColor">@color/tertiary_color</item>
+    </style>
+</resources>
